@@ -110,4 +110,12 @@ public class DebetCardInterfaceTest {
         $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
 
     }
+
+    @Test
+    public void shouldCheckBoxFieldMissing() {
+        $("[type=text]").setValue("Иван");
+        $("[type=tel]").setValue("+79876543210");
+        $(".button__content").click();
+        $("[data-test-id=agreement]").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
+    }
 }
