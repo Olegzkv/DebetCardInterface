@@ -116,6 +116,6 @@ public class DebetCardInterfaceTest {
         $("[type=text]").setValue("Иван");
         $("[type=tel]").setValue("+79876543210");
         $(".button__content").click();
-        $("[data-test-id=agreement]").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
+        $("[data-test-id='agreement'].input_invalid").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
     }
 }
